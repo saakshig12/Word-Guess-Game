@@ -1,4 +1,4 @@
-var words = ["lexus", "audi", "mazda", "subaru", "kia motors", "honda", "mercedes-benz", "volvo"]
+var words = ["lexus", "audi", "mazda", "subaru", "kia-motors", "honda", "mercedes-benz", "volvo"]
 
 var randomWord = "";
 var lettersOfWord = []
@@ -101,7 +101,7 @@ function aud() {
         benz.pause();
         subaru.pause();
         kia.play();
-        document.getElementById("image").src = "assets/images/kia";
+        document.getElementById("image").src = "/assets/images/kia";
     }
     
     else if (randomWord === words[5]) {
@@ -113,7 +113,7 @@ function aud() {
         benz.pause();
         subaru.pause();
         mazda.play();
-        document.getElementById("image").src = "assets/images/mazda";
+        document.getElementById("image").src = "/assets/images/mazda";
     }
  
     else if (randomWord === words[6]) {
@@ -125,7 +125,7 @@ function aud() {
         benz.pause();
         subaru.pause();
         audi.play();
-        document.getElementById("image").src = "assets/images/audi";
+        document.getElementById("image").src = "/assets/images/audi";
     }
 
     else if (randomWord === words[7]) {
@@ -137,7 +137,7 @@ function aud() {
         benz.pause();
         subaru.pause();
         lex.play();
-        document.getElementById("image").src = "assets/images/lex";
+        document.getElementById("image").src = "/assets/images/lex";
     }
 };
 
