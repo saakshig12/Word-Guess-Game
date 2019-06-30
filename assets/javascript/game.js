@@ -10,9 +10,6 @@ var wins = 0;
 var losses = 0;
 var guessesRemaining = 9;
 
-
-
-
 function Game() {
     randomWord = words[Math.floor(Math.random() * words.length)];
     lettersOfWord = randomWord.split("");
@@ -30,15 +27,13 @@ function Game() {
     console.log(blanksAndCorrect)
 }
 
-
-
 var lex = document.getElementById("lexus");
 var audi = document.getElementById("audi");
 var mazda = document.getElementById("mazda");
 var subaru = document.getElementById("subaru");
-var kia = document.getElementById("kia motors");
+var kia = document.getElementById("kiamotors");
 var honda = document.getElementById("honda");
-var benz = document.getElementById("mercedes-benz");
+var benz = document.getElementById("mercedesbenz");
 var volvo = document.getElementById("volvo")
 
 
@@ -141,7 +136,6 @@ function aud() {
     }
 };
 
-
 function reset() {
     guessesRemaining = 8;
     wrongGuess = [];
@@ -170,9 +164,8 @@ function checkLetters(letter) {
     console.log(blanksAndCorrect);
 }
 
-
 function complete() {
-    console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
+    console.log("wins:" + wins + "losses:" + losses + "guesses left:" + guessesRemaining)
 
     if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
         wins++;
@@ -189,7 +182,6 @@ function complete() {
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
-
 
 Game()
 
