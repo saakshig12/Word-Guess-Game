@@ -27,6 +27,8 @@ function Game() {
     console.log(blanksAndCorrect)
 }
 
+
+
 var lex = document.getElementById("lexus");
 var audi = document.getElementById("audi");
 var mazda = document.getElementById("mazda");
@@ -35,6 +37,16 @@ var kia = document.getElementById("kiamotors");
 var honda = document.getElementById("honda");
 var benz = document.getElementById("mercedesbenz");
 var volvo = document.getElementById("volvo")
+
+
+document.onkeyup = function (event) {
+    var guesses = String.fromCharCode(event.keyCode).toLowerCase();
+    checkLetters(guesses);
+    complete();
+    console.log(guesses);
+
+    document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
+}
 
 
 function aud() {
@@ -48,7 +60,6 @@ function aud() {
         honda.pause();
         volvo.pause();
         benz.play();
-        document.getElementById("image").src = "assets/images/benz";
     }
     
     else if (randomWord === words[1]) {
@@ -60,7 +71,6 @@ function aud() {
         honda.pause();
         benz.pause();
         volvo.play();
-        document.getElementById("image").src = "assets/images/volvo";
     }
 
     else if (randomWord === words[2]) {
@@ -72,7 +82,6 @@ function aud() {
         benz.pause();
         subaru.pause();
         honda.play();
-        document.getElementById("image").src = "assets/images/honda";
     }
    
     else if (randomWord === words[3]) {
@@ -84,7 +93,6 @@ function aud() {
         benz.pause();
         honda.pause();
         subaru.play();
-        document.getElementById("image").src = "assets/images/subaru";
     }
    
     else if (randomWord === words[4]) {
@@ -96,7 +104,6 @@ function aud() {
         benz.pause();
         subaru.pause();
         kia.play();
-        document.getElementById("image").src = "assets/images/kia";
     }
     
     else if (randomWord === words[5]) {
@@ -108,7 +115,6 @@ function aud() {
         benz.pause();
         subaru.pause();
         mazda.play();
-        document.getElementById("image").src = "assets/images/mazda";
     }
  
     else if (randomWord === words[6]) {
@@ -120,7 +126,6 @@ function aud() {
         benz.pause();
         subaru.pause();
         audi.play();
-        document.getElementById("image").src = "assets/images/audi";
     }
 
     else if (randomWord === words[7]) {
@@ -132,16 +137,9 @@ function aud() {
         benz.pause();
         subaru.pause();
         lex.play();
-        document.getElementById("image").src = "assets/images/lex";
     }
 };
 
-function reset() {
-    guessesRemaining = 8;
-    wrongGuess = [];
-    blanksAndCorrect = [];
-    Game()
-}
 
 function checkLetters(letter) {
     var letterInWord = false;
@@ -183,13 +181,9 @@ function complete() {
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
 
-Game()
 
-document.onkeyup = function (event) {
-    var guesses = String.fromCharCode(event.keyCode).toLowerCase();
-    checkLetters(guesses);
-    complete();
-    console.log(guesses);
-
-    document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
+function reset() {
+    guessesRemaining = 8;
+    wrongGuess = [];
+    blanksAndCorrect = [];
 }
