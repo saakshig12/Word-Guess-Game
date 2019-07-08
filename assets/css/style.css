@@ -1,7 +1,38 @@
 
+body {
+    background-image: url("https://di-uploads-pod6.s3.amazonaws.com/chernerbrothersauto/uploads/2016/12/cars-on-a-lot-near-trees.jpg");
+    width: 100%
+}
+
+h1 {
+    font-size: 43px;
+    border: solid 5px turquoise;
+    background: white;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 15px;
+    font-family: 'Faster One', cursive;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+
+img {
+    margin: 10px;
+}
+
+
 .sidebar {
-    padding: 2px;
+    padding: 5px;
     position: relative;
+    border-top: solid turquoise 2px;
+    border-bottom: solid turquoise 2px;
     margin-bottom: 5px;
     font-family: 'Press Start 2P', cursive;
     font-size: 12px;
@@ -15,20 +46,8 @@ span {
     font-size: 15px;
 }
 
-h1, h2 {
-    font-size: 43px;
-    border: 5px turquoise;
-    background: white;
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right:10%;
-    padding: 15px;
-    font-family: 'Faster One', cursive;
-}
-
 .background {
-    border:  turquoise;
+    border: solid 5px turquoise;
 }
 
 .container {
@@ -50,9 +69,4 @@ h1, h2 {
 
 #scoreboard {
     padding: 20px;
-}
-
-body {
-    background-image: url("https://di-uploads-pod6.s3.amazonaws.com/chernerbrothersauto/uploads/2016/12/cars-on-a-lot-near-trees.jpg");
-    width: 100%
 }
